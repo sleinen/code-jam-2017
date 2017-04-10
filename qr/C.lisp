@@ -16,10 +16,10 @@
 	  (dotimes (i n)
 	    (let* ((n (read in))
 		   (k (read in)))
-	      (multiple-value-bind (max min)
+	      (multiple-value-bind (min max)
 		  (minmax n k)
 		(format out "Case #~D: ~D ~D~%"
-			(+ i 1) min max)))))))))
+			(+ i 1) max min)))))))))
 (defun minmax (n k)
   (minmax-1 n (- k 1) 1 0))
 
